@@ -1,9 +1,12 @@
 def LongestWord(sen)
 
-  a = sen.split(" ")
-  b = a.max_by(&:length)
-  return b
-           
+  a = sen.gsub(/[[:punct:]]/, '')
+  b = a.split(" ")
+  c = b.max_by(&:length)
+  
+  
+  return c
+         
 end
    
 # keep this function call here 
